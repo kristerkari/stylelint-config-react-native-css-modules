@@ -3,24 +3,25 @@
   "version": "1.0.0",
   "description": "Shareable stylelint config for React Native CSS modules",
   "main": "index.js",
-  "files": [
-    "index.js",
-    "README.md"
-  ],
+  "files": ["index.js", "README.md"],
+  "keywords": ["stylelint", "stylelint-config", "react-native", "css-modules"],
   "scripts": {
     "release": "npmpub",
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kristerkari/stylelint-config-react-native-css-modules.git"
+    "url":
+      "git+https://github.com/kristerkari/stylelint-config-react-native-css-modules.git"
   },
   "author": "Krister Kari",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kristerkari/stylelint-config-react-native-css-modules/issues"
+    "url":
+      "https://github.com/kristerkari/stylelint-config-react-native-css-modules/issues"
   },
-  "homepage": "https://github.com/kristerkari/stylelint-config-react-native-css-modules#readme",
+  "homepage":
+    "https://github.com/kristerkari/stylelint-config-react-native-css-modules#readme",
   "devDependencies": {
     "jest": "^22.2.2",
     "npmpub": "^3.1.0",
