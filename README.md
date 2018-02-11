@@ -1,6 +1,6 @@
 # stylelint-config-react-native-css-modules
 
-Shareable stylelint config for React Native CSS modules
+Shareable stylelint config for [React Native CSS modules](https://github.com/kristerkari/react-native-css-modules)
 
 ## Installation and usage
 
