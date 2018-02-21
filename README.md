@@ -1,5 +1,8 @@
 # stylelint-config-react-native-css-modules
 
+[![NPM version](http://img.shields.io/npm/v/stylelint-config-react-native-css-modules.svg)](https://www.npmjs.org/package/stylelint-config-react-native-css-modules)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
+
 Shareable stylelint config for [React Native CSS modules](https://github.com/kristerkari/react-native-css-modules)
 
 ## Installation and usage
