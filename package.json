@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Shareable stylelint config for React Native CSS modules",
   "main": "index.js",
-  "files": ["index.js", "README.md"],
+  "files": ["index.js", "CHANGELOG.md", "README.md"],
   "keywords": ["stylelint", "stylelint-config", "react-native", "css-modules"],
   "scripts": {
     "release": "npmpub",
