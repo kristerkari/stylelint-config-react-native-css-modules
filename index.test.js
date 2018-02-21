@@ -38,7 +38,7 @@ describe("stylelint-config-react-native-css-modules", () => {
   });
 
   it("does not allow unknown properties", () => {
-    const css = ".test { display: flex; }";
+    const css = ".test { word-wrap: break-word; }";
     expect.assertions(2);
 
     return stylelint
