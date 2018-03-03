@@ -1,5 +1,7 @@
 # stylelint-config-react-native-css-modules
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kristerkari/stylelint-config-react-native-css-modules.svg)](https://greenkeeper.io/)
+
 [![NPM version](http://img.shields.io/npm/v/stylelint-config-react-native-css-modules.svg)](https://www.npmjs.org/package/stylelint-config-react-native-css-modules)
 [![Build Status](https://travis-ci.org/kristerkari/stylelint-config-react-native-css-modules.svg?branch=master)](https://travis-ci.org/kristerkari/stylelint-config-react-native-css-modules)
 [![Build status](https://ci.appveyor.com/api/projects/status/u4f5x5k6d5ff24qt/branch/master?svg=true)](https://ci.appveyor.com/project/kristerkari/stylelint-config-react-native-css-modules/branch/master)
