@@ -34,6 +34,8 @@ Create the `.stylelintrc` config file (or open the existing one) and extend `sty
 }
 ```
 
+## Custom settings
+
 The config enables by default warnings for CSS selectors that are not compatible with React Native CSS modules.
 
 If you want to turn off the CSS selector warnings, you can use the following config:
@@ -61,48 +63,48 @@ If you want the CSS selector warnings to be turned into stylelint errors, you ca
     "selector-pseudo-class-whitelist": [
       [],
       {
-        severity: "error",
-        message:
+        "severity": "error",
+        "message":
           "pseudo class selectors are ignored by React Native CSS modules. You may still use them for web."
       }
     ],
     "selector-max-universal": [
       0,
       {
-        severity: "error",
-        message:
+        "severity": "error",
+        "message":
           "universal selectors are ignored by React Native CSS modules. You may still use them for web."
       }
     ],
     "selector-max-attribute": [
       0,
       {
-        severity: "error",
-        message:
+        "severity": "error",
+        "message":
           "attribute selectors are ignored by React Native CSS modules. You may still use them for web."
       }
     ],
     "selector-max-type": [
       0,
       {
-        severity: "error",
-        message:
+        "severity": "error",
+        "message":
           "type selectors are ignored by React Native CSS modules. You may still use them for web."
       }
     ],
     "selector-max-combinators": [
       0,
       {
-        severity: "error",
-        message:
+        "severity": "error",
+        "message":
           "combinator selectors are ignored by React Native CSS modules. You may still use them for web."
       }
     ],
     "selector-max-id": [
       0,
       {
-        severity: "error",
-        message:
+        "severity": "error",
+        "message":
           "id selectors are ignored by React Native CSS modules. You may still use them for web."
       }
     ]
