@@ -33,3 +33,79 @@ Create the `.stylelintrc` config file (or open the existing one) and extend `sty
   }
 }
 ```
+
+The config enables by default warnings for CSS selectors that are not compatible with React Native CSS modules.
+
+If you want to turn off the CSS selector warnings, you can use the following config:
+
+```json
+{
+  "extends": "stylelint-config-react-native-css-modules",
+  "rules": {
+    "selector-pseudo-class-whitelist": null,
+    "selector-max-universal": null,
+    "selector-max-attribute": null,
+    "selector-max-type": null,
+    "selector-max-combinators": null,
+    "selector-max-id": null
+  }
+}
+```
+
+If you want the CSS selector warnings to be turned into stylelint errors, you can use the following config:
+
+```json
+{
+  "extends": "stylelint-config-react-native-css-modules",
+  "rules": {
+    "selector-pseudo-class-whitelist": [
+      [],
+      {
+        severity: "error",
+        message:
+          "pseudo class selectors are ignored by React Native CSS modules. You may still use them for web."
+      }
+    ],
+    "selector-max-universal": [
+      0,
+      {
+        severity: "error",
+        message:
+          "universal selectors are ignored by React Native CSS modules. You may still use them for web."
+      }
+    ],
+    "selector-max-attribute": [
+      0,
+      {
+        severity: "error",
+        message:
+          "attribute selectors are ignored by React Native CSS modules. You may still use them for web."
+      }
+    ],
+    "selector-max-type": [
+      0,
+      {
+        severity: "error",
+        message:
+          "type selectors are ignored by React Native CSS modules. You may still use them for web."
+      }
+    ],
+    "selector-max-combinators": [
+      0,
+      {
+        severity: "error",
+        message:
+          "combinator selectors are ignored by React Native CSS modules. You may still use them for web."
+      }
+    ],
+    "selector-max-id": [
+      0,
+      {
+        severity: "error",
+        message:
+          "id selectors are ignored by React Native CSS modules. You may still use them for web."
+      }
+    ]
+  }
+}
+```
