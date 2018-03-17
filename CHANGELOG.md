@@ -1,3 +1,7 @@
+## v1.4.0
+
+* Added: re-enabled selector rules from v1.2.0, but this time as warnings with a custom warning message.
+
 ## v1.3.0
 
 * Removed: stylelint rules added in v1.2.0. Selectors should not be linted as React Native CSS modules ignores all selectors that are not simple class selectors.
