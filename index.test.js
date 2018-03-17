@@ -71,11 +71,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "id selectors are ignored by React Native CSS modules.",
-          ),
-        ).toBe(true);
+        expect(result.output.includes("id selectors are ignored")).toBe(true);
       });
   });
 
@@ -93,11 +89,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "type selectors are ignored by React Native CSS modules.",
-          ),
-        ).toBe(true);
+        expect(result.output.includes("type selectors are ignored")).toBe(true);
       });
   });
 
@@ -115,11 +107,9 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "universal selectors are ignored by React Native CSS modules.",
-          ),
-        ).toBe(true);
+        expect(result.output.includes("universal selectors are ignored")).toBe(
+          true,
+        );
       });
   });
 
@@ -137,11 +127,9 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "combinator selectors are ignored by React Native CSS modules.",
-          ),
-        ).toBe(true);
+        expect(result.output.includes("combinator selectors are ignored")).toBe(
+          true,
+        );
       });
   });
 
@@ -159,11 +147,9 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "attribute selectors are ignored by React Native CSS modules.",
-          ),
-        ).toBe(true);
+        expect(result.output.includes("attribute selectors are ignored")).toBe(
+          true,
+        );
       });
   });
 
@@ -181,11 +167,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "type selectors are ignored by React Native CSS modules.",
-          ),
-        ).toBe(true);
+        expect(result.output.includes("type selectors are ignored")).toBe(true);
       });
   });
 
@@ -204,9 +186,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       .then(result => {
         expect(result.errored).toBe(false);
         expect(
-          result.output.includes(
-            "pseudo class selectors are ignored by React Native CSS modules.",
-          ),
+          result.output.includes("pseudo class selectors are ignored"),
         ).toBe(true);
       });
   });
