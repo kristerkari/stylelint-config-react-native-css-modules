@@ -9,6 +9,8 @@
 
 Shareable stylelint config for [React Native CSS modules](https://github.com/kristerkari/react-native-css-modules)
 
+<img src="screenshots/warning.png" width="540">
+
 ## Installation and usage
 
 Install `stylelint-config-react-native-css-modules` (and `stylelint` + `stylelint-react-native`, if you haven't done so yet):
