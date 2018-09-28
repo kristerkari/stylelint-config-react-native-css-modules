@@ -1,3 +1,7 @@
+## v2.0.1
+
+- Fixed: add missing viewport units to units whitelist.
+
 ## v2.0.0
 
 - Added: errors for vendor prefixes and warnings for incompatible font weights, at-rules and units.
