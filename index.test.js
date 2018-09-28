@@ -10,8 +10,8 @@ describe("stylelint-config-react-native-css-modules", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./index",
-        },
+          extends: "./index"
+        }
       })
       .then(result => {
         expect(result.errored).toBe(true);
@@ -28,12 +28,52 @@ describe("stylelint-config-react-native-css-modules", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./index",
-        },
+          extends: "./index"
+        }
       })
       .then(result => {
         expect(result.errored).toBe(true);
         expect(result.output.includes("property-no-vendor-prefix")).toBe(true);
+      });
+  });
+
+  it("does not allow vendor prefixes in at-rules", () => {
+    const css =
+      ".test { @-webkit-keyframes() { 0% { color: blue } 100% { color: red; } }  }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(true);
+        expect(result.output.includes("at-rule-no-vendor-prefix")).toBe(true);
+      });
+  });
+
+  it("does not allow vendor prefixes in media features", () => {
+    const css =
+      "@media (-webkit-min-device-pixel-ratio: 1) { .foo { color: blue; } }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(true);
+        expect(
+          result.output.includes("media-feature-name-no-vendor-prefix")
+        ).toBe(true);
       });
   });
 
@@ -46,13 +86,13 @@ describe("stylelint-config-react-native-css-modules", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./index",
-        },
+          extends: "./index"
+        }
       })
       .then(result => {
         expect(result.errored).toBe(true);
         expect(
-          result.output.includes("react-native/css-property-no-unknown"),
+          result.output.includes("react-native/css-property-no-unknown")
         ).toBe(true);
       });
   });
@@ -66,8 +106,8 @@ describe("stylelint-config-react-native-css-modules", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./index",
-        },
+          extends: "./index"
+        }
       })
       .then(result => {
         expect(result.errored).toBe(false);
@@ -84,8 +124,8 @@ describe("stylelint-config-react-native-css-modules", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./index",
-        },
+          extends: "./index"
+        }
       })
       .then(result => {
         expect(result.errored).toBe(false);
@@ -102,13 +142,13 @@ describe("stylelint-config-react-native-css-modules", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./index",
-        },
+          extends: "./index"
+        }
       })
       .then(result => {
         expect(result.errored).toBe(false);
         expect(result.output.includes("universal selectors are ignored")).toBe(
-          true,
+          true
         );
       });
   });
@@ -122,13 +162,13 @@ describe("stylelint-config-react-native-css-modules", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./index",
-        },
+          extends: "./index"
+        }
       })
       .then(result => {
         expect(result.errored).toBe(false);
         expect(result.output.includes("combinator selectors are ignored")).toBe(
-          true,
+          true
         );
       });
   });
@@ -142,13 +182,13 @@ describe("stylelint-config-react-native-css-modules", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./index",
-        },
+          extends: "./index"
+        }
       })
       .then(result => {
         expect(result.errored).toBe(false);
         expect(result.output.includes("attribute selectors are ignored")).toBe(
-          true,
+          true
         );
       });
   });
@@ -162,8 +202,8 @@ describe("stylelint-config-react-native-css-modules", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./index",
-        },
+          extends: "./index"
+        }
       })
       .then(result => {
         expect(result.errored).toBe(false);
@@ -180,13 +220,72 @@ describe("stylelint-config-react-native-css-modules", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./index",
-        },
+          extends: "./index"
+        }
       })
       .then(result => {
         expect(result.errored).toBe(false);
         expect(
-          result.output.includes("pseudo class selectors are ignored"),
+          result.output.includes("pseudo class selectors are ignored")
+        ).toBe(true);
+      });
+  });
+
+  it("warns for font-weights that are not compatible with Android", () => {
+    const css = ".foo { font-weight: 300 }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(result.output.includes("font-weight value")).toBe(true);
+      });
+  });
+
+  it("warns for incompatible @-rules", () => {
+    const css =
+      ".foo { @keyframes() { 0% { color: blue } 100% { color: red; } } }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(result.output.includes("the @-rule is ignored")).toBe(true);
+      });
+  });
+
+  it("warns for incompatible units", () => {
+    const css = ".foo { font-size: 1ch; }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(
+          result.output.includes(
+            "the unit is ignored by React Native CSS modules"
+          )
         ).toBe(true);
       });
   });
@@ -201,8 +300,8 @@ describe("stylelint-config-react-native-css-modules", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./index",
-        },
+          extends: "./index"
+        }
       })
       .then(result => {
         expect(result.errored).toBe(false);
