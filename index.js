@@ -23,7 +23,7 @@ module.exports = {
       }
     ],
     "unit-whitelist": [
-      ["px", "rem", "deg", "%"],
+      ["px", "rem", "deg", "%", "vh", "vw", "vmin", "vmax"],
       {
         severity: "warning",
         message:
