@@ -1,3 +1,8 @@
+## v2.0.0
+
+- Added: errors for vendor prefixes and warnings for incompatible font weights, at-rules and units.
+- Removed: support for `stylelint-react-native` v1.
+
 ## v1.4.1
 
 - Fixed: `peerDependencies` version range now covers `stylelint-react-native` v2.
