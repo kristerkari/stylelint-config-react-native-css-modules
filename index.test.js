@@ -245,7 +245,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(result.output.includes("font-weight value other than 400")).toBe(
+        expect(result.output.includes("font-weight value other than")).toBe(
           true
         );
       });
