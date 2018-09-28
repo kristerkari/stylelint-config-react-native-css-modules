@@ -45,6 +45,7 @@ If you want to turn off the warnings, you can use the following config:
 {
   "extends": "stylelint-config-react-native-css-modules",
   "rules": {
+    "react-native/font-weight-no-ignored-values": null,
     "at-rule-blacklist": null,
     "unit-whitelist": null,
     "selector-pseudo-class-whitelist": null,
