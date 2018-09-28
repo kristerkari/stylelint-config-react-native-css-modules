@@ -23,9 +23,9 @@
   "homepage":
     "https://github.com/kristerkari/stylelint-config-react-native-css-modules#readme",
   "devDependencies": {
-    "jest": "^22.2.2",
-    "npmpub": "^4.0.1",
-    "stylelint": "^9.1.1",
+    "jest": "^23.6.0",
+    "npmpub": "^4.1.0",
+    "stylelint": "^9.6.0",
     "stylelint-react-native": "^2.0.0"
   },
   "peerDependencies": {
