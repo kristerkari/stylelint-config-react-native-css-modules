@@ -37,14 +37,16 @@ Create the `.stylelintrc` config file (or open the existing one) and extend `sty
 
 ## Custom settings
 
-The config enables by default warnings for CSS selectors that are not compatible with React Native CSS modules.
+The config enables by default warnings for at-rules, units, CSS selectors that are not compatible with React Native CSS modules.
 
-If you want to turn off the CSS selector warnings, you can use the following config:
+If you want to turn off the warnings, you can use the following config:
 
 ```json
 {
   "extends": "stylelint-config-react-native-css-modules",
   "rules": {
+    "at-rule-blacklist": null,
+    "unit-whitelist": null,
     "selector-pseudo-class-whitelist": null,
     "selector-max-universal": null,
     "selector-max-attribute": null,
@@ -55,58 +57,66 @@ If you want to turn off the CSS selector warnings, you can use the following con
 }
 ```
 
-If you want the CSS selector warnings to be turned into stylelint errors, you can use the following config:
+If you want to change the at-rule, unit, and CSS selector warnings into stylelint errors (e.g. If you are using React Native only), you can use the following config:
 
 ```json
 {
   "extends": "stylelint-config-react-native-css-modules",
   "rules": {
+    "at-rule-blacklist": [
+      ["keyframes", "font-face", "supports"],
+      {
+        "severity": "error",
+        "message": "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+      }
+    ],
+    "unit-whitelist": [
+      ["px", "rem", "deg", "%"],
+      {
+        "severity": "error",
+        "message": "the unit is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+      }
+    ],
     "selector-pseudo-class-whitelist": [
       [],
       {
         "severity": "error",
-        "message":
-          "pseudo class selectors are ignored by React Native CSS modules. You may still use them for web."
+        "message": "pseudo class selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
       }
     ],
     "selector-max-universal": [
       0,
       {
         "severity": "error",
-        "message":
-          "universal selectors are ignored by React Native CSS modules. You may still use them for web."
+        "message": "universal selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
       }
     ],
     "selector-max-attribute": [
       0,
       {
         "severity": "error",
-        "message":
-          "attribute selectors are ignored by React Native CSS modules. You may still use them for web."
+        "message": "attribute selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
       }
     ],
     "selector-max-type": [
       0,
       {
         "severity": "error",
-        "message":
-          "type selectors are ignored by React Native CSS modules. You may still use them for web."
+        "message": "type selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
       }
     ],
     "selector-max-combinators": [
       0,
       {
         "severity": "error",
-        "message":
-          "combinator selectors are ignored by React Native CSS modules. You may still use them for web."
+        "message": "combinator selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
       }
     ],
     "selector-max-id": [
       0,
       {
         "severity": "error",
-        "message":
-          "id selectors are ignored by React Native CSS modules. You may still use them for web."
+        "message": "id selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
       }
     ]
   }
