@@ -25,7 +25,7 @@
   "devDependencies": {
     "jest": "^23.6.0",
     "npmpub": "^4.1.0",
-    "stylelint": "^9.6.0",
+    "stylelint": "^9.9.0",
     "stylelint-react-native": "^2.0.0"
   },
   "peerDependencies": {
