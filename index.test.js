@@ -231,6 +231,24 @@ describe("stylelint-config-react-native-css-modules", () => {
       });
   });
 
+  it("does not warn for ICSS :export pseudo-selector", () => {
+    const css = ":export { color: red; }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(result.output).toBe("");
+      });
+  });
+
   it("warns for font-weights that are not compatible with Android", () => {
     const css = ".foo { font-weight: 300 }";
     expect.assertions(2);
