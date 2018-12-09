@@ -4126,9 +4126,10 @@ style-search@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
 
-stylelint-react-native@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-react-native/-/stylelint-react-native-2.0.0.tgz#2477b295da0a488a2597207297b76b09d0ec9589"
+stylelint-react-native@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/stylelint-react-native/-/stylelint-react-native-2.0.1.tgz#a3f9ec2ad8f84acce344de85c15601cca4c6f9c8"
+  integrity sha512-DYReEaPFjlITxP3GIpbWF5ioFomF/EEPcCU82uZCdxSFQPlaI4wDg40zL/MB4YtSId5IoLNZA5K1ztDZwlOY0A==
   dependencies:
     react-native-known-styling-properties "^1.0.4"
 
