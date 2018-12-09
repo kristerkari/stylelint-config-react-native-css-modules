@@ -72,7 +72,7 @@ If you want to change the at-rule, unit, and CSS selector warnings into stylelin
       }
     ],
     "unit-whitelist": [
-      ["px", "rem", "deg", "%"],
+      ["px", "rem", "deg", "%", "vh", "vw", "vmin", "vmax"],
       {
         "severity": "error",
         "message": "the unit is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
