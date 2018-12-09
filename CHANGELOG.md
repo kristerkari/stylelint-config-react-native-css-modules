@@ -1,3 +1,7 @@
+## v2.1.0
+
+- Added: support for ICSS `:export` block (don't show warnings).
+
 ## v2.0.1
 
 - Fixed: add missing viewport units to units whitelist.
