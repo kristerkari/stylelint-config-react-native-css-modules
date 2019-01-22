@@ -68,56 +68,56 @@ If you want to change the at-rule, unit, and CSS selector warnings into stylelin
       ["keyframes", "font-face", "supports"],
       {
         "severity": "error",
-        "message": "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+        "message": "the @-rule is ignored by React Native CSS modules."
       }
     ],
     "unit-whitelist": [
       ["px", "rem", "deg", "%", "vh", "vw", "vmin", "vmax"],
       {
         "severity": "error",
-        "message": "the unit is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+        "message": "the unit is ignored by React Native CSS modules."
       }
     ],
     "selector-pseudo-class-whitelist": [
       ["export"],
       {
         "severity": "error",
-        "message": "pseudo class selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+        "message": "pseudo class selectors are ignored by React Native CSS modules."
       }
     ],
     "selector-max-universal": [
       0,
       {
         "severity": "error",
-        "message": "universal selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+        "message": "universal selectors are ignored by React Native CSS modules."
       }
     ],
     "selector-max-attribute": [
       0,
       {
         "severity": "error",
-        "message": "attribute selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+        "message": "attribute selectors are ignored by React Native CSS modules."
       }
     ],
     "selector-max-type": [
       0,
       {
         "severity": "error",
-        "message": "type selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+        "message": "type selectors are ignored by React Native CSS modules."
       }
     ],
     "selector-max-combinators": [
       0,
       {
         "severity": "error",
-        "message": "combinator selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+        "message": "combinator selectors are ignored by React Native CSS modules."
       }
     ],
     "selector-max-id": [
       0,
       {
         "severity": "error",
-        "message": "id selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+        "message": "id selectors are ignored by React Native CSS modules."
       }
     ]
   }
