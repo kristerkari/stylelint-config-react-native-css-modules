@@ -79,7 +79,7 @@ If you want to change the at-rule, unit, and CSS selector warnings into stylelin
       }
     ],
     "selector-pseudo-class-whitelist": [
-      ["export"],
+      ["export", "root"],
       {
         "severity": "error",
         "message": "pseudo class selectors are ignored by React Native CSS modules."

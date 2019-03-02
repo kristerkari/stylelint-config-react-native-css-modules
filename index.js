@@ -31,7 +31,7 @@ module.exports = {
       }
     ],
     "selector-pseudo-class-whitelist": [
-      ["export"],
+      ["export", "root"],
       {
         severity: "warning",
         message:
