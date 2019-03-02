@@ -1,3 +1,7 @@
+## v2.1.1
+
+- Fixed: do not warn for `:root` pseudo selector (CSS variables).
+
 ## v2.1.0
 
 - Added: support for ICSS `:export` block (don't show warnings).
