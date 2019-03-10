@@ -1,3 +1,7 @@
+## v2.2.0
+
+- Added: warning for `@charset` at-rule not being supported in React Native.
+
 ## v2.1.1
 
 - Fixed: do not warn for `:root` pseudo selector (CSS variables).
