@@ -304,6 +304,24 @@ describe("stylelint-config-react-native-css-modules", () => {
       });
   });
 
+  it("warns for @charset", () => {
+    const css = '@charset "utf-8";';
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(result.output.includes("the @-rule is ignored")).toBe(true);
+      });
+  });
+
   it("warns for incompatible units", () => {
     const css = ".foo { font-size: 1ch; }";
     expect.assertions(2);
