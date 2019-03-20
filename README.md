@@ -48,6 +48,7 @@ If you want to turn off the warnings, you can use the following config:
   "rules": {
     "react-native/font-weight-no-ignored-values": null,
     "at-rule-blacklist": null,
+    "function-blacklist": null,
     "unit-whitelist": null,
     "selector-pseudo-class-whitelist": null,
     "selector-max-universal": null,
@@ -70,6 +71,24 @@ If you want to change the at-rule, unit, and CSS selector warnings into stylelin
       {
         "severity": "error",
         "message": "the @-rule is ignored by React Native CSS modules."
+      }
+    ],
+    "function-blacklist": [
+      [
+        "linear-gradient",
+        "radial-gradient",
+        "repeating-linear-gradient",
+        "repeating-radial-gradient",
+        "calc",
+        "url",
+        "translate3d",
+        "rotate3d",
+        "matrix3d",
+        "scale3d"
+      ],
+      {
+        "severity": "error",
+        "message": "the function is ignored by React Native CSS modules."
       }
     ],
     "unit-whitelist": [

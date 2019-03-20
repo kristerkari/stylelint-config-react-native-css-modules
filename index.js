@@ -22,6 +22,25 @@ module.exports = {
           "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
       }
     ],
+    "function-blacklist": [
+      [
+        "linear-gradient",
+        "radial-gradient",
+        "repeating-linear-gradient",
+        "repeating-radial-gradient",
+        "calc",
+        "url",
+        "translate3d",
+        "rotate3d",
+        "matrix3d",
+        "scale3d"
+      ],
+      {
+        severity: "warning",
+        message:
+          "the function is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+      }
+    ],
     "unit-whitelist": [
       ["px", "rem", "deg", "%", "vh", "vw", "vmin", "vmax"],
       {
