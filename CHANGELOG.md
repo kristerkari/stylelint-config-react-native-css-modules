@@ -1,3 +1,7 @@
+## v2.3.0
+
+- Added: blacklist CSS functions that are not supported by properties that are supported by React Native CSS modules.
+
 ## v2.2.0
 
 - Added: warning for `@charset` at-rule not being supported in React Native.
