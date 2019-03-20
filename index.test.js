@@ -359,11 +359,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "the function is ignored by React Native CSS modules"
-          )
-        ).toBe(true);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
       });
   });
 
@@ -381,11 +377,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "the function is ignored by React Native CSS modules"
-          )
-        ).toBe(true);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
       });
   });
 
@@ -404,11 +396,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "the function is ignored by React Native CSS modules"
-          )
-        ).toBe(true);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
       });
   });
 
@@ -427,11 +415,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "the function is ignored by React Native CSS modules"
-          )
-        ).toBe(true);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
       });
   });
 
@@ -449,11 +433,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "the function is ignored by React Native CSS modules"
-          )
-        ).toBe(true);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
       });
   });
 
@@ -471,11 +451,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "the function is ignored by React Native CSS modules"
-          )
-        ).toBe(true);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
       });
   });
 
@@ -493,11 +469,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "the function is ignored by React Native CSS modules"
-          )
-        ).toBe(true);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
       });
   });
 
@@ -515,11 +487,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "the function is ignored by React Native CSS modules"
-          )
-        ).toBe(true);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
       });
   });
 
@@ -538,11 +506,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "the function is ignored by React Native CSS modules"
-          )
-        ).toBe(true);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
       });
   });
 
@@ -560,11 +524,7 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(result => {
         expect(result.errored).toBe(false);
-        expect(
-          result.output.includes(
-            "the function is ignored by React Native CSS modules"
-          )
-        ).toBe(true);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
       });
   });
 
