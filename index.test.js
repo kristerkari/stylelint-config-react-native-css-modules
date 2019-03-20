@@ -344,6 +344,190 @@ describe("stylelint-config-react-native-css-modules", () => {
       });
   });
 
+  it("warns for linear-gradient function", () => {
+    const css =
+      ".foo { background: linear-gradient(to right, red 5%, green 30%, yellow 75%); }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
+      });
+  });
+
+  it("warns for radial-gradient function", () => {
+    const css = ".foo { background: radial-gradient(yellow, red); }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
+      });
+  });
+
+  it("warns for repeating-linear-gradient function", () => {
+    const css =
+      ".foo { background: repeating-linear-gradient(gold 15%, orange 30%); }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
+      });
+  });
+
+  it("warns for repeating-radial-gradient function", () => {
+    const css =
+      ".foo { background: repeating-radial-gradient(yellow 20%, red 40%); }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
+      });
+  });
+
+  it("warns for calc function", () => {
+    const css = ".foo { width: calc(100% - 80px); }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
+      });
+  });
+
+  it("warns for url function", () => {
+    const css = ".foo { background: url(/images/image.png); }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
+      });
+  });
+
+  it("warns for translate3d function", () => {
+    const css = ".foo { transform: translate3d(60px,0,0); }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
+      });
+  });
+
+  it("warns for rotate3d function", () => {
+    const css = ".foo { transform: rotate3d(1, 0, 0, 60deg); }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
+      });
+  });
+
+  it("warns for matrix3d function", () => {
+    const css =
+      ".foo { transform: matrix3d(0.583333, 0.186887, 0.79044, 0, -0.52022, 0.833333, 0.186887, 0, -0.623773, -0.52022, 0.583333, 0, 0, 0, 0, 1); }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
+      });
+  });
+
+  it("warns for scale3d function", () => {
+    const css = ".foo { transform: scale3d(3, 3, 1); }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(result => {
+        expect(result.errored).toBe(false);
+        expect(result.output.includes("the function is ignored by")).toBe(true);
+      });
+  });
+
   it("allows pseudo and type selectors (ignored by React Native CSS modules, but can be used for web when creating hybrid apps)", () => {
     const css =
       ".test:hover { color: blue; } .test input[type=text] { color: red; }";
