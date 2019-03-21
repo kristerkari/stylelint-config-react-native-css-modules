@@ -25,7 +25,7 @@ describe("stylelint-config-react-native-css-modules", () => {
 
   it("does not allow vendor prefixes in properties", () => {
     const css = ".test { -webkit-transform: scale(1); }";
-    expect.assertions(2);
+    expect.assertions(3);
 
     return stylelint
       .lint({
@@ -37,10 +37,12 @@ describe("stylelint-config-react-native-css-modules", () => {
       })
       .then(output => {
         const warnings = output.results[0].warnings;
-        const warning = warnings[0];
         expect(output.errored).toBe(true);
-        expect(warning.text).toBe(
+        expect(warnings[0].text).toBe(
           'Unexpected unknown property "-webkit-transform" (react-native/css-property-no-unknown)'
+        );
+        expect(warnings[1].text).toBe(
+          'Unexpected vendor-prefix "-webkit-transform" (property-no-vendor-prefix)'
         );
       });
   });
