@@ -47,29 +47,6 @@ describe("stylelint-config-react-native-css-modules", () => {
       });
   });
 
-  it("does not allow vendor prefixes in at-rules", () => {
-    const css =
-      ".test { @-webkit-keyframes() { 0% { color: blue } 100% { color: red; } }  }";
-    expect.assertions(2);
-
-    return stylelint
-      .lint({
-        code: css,
-        formatter: "string",
-        config: {
-          extends: "./index"
-        }
-      })
-      .then(output => {
-        const warnings = output.results[0].warnings;
-        const warning = warnings[0];
-        expect(output.errored).toBe(true);
-        expect(warning.text).toBe(
-          'Unexpected vendor-prefixed at-rule "@-webkit-keyframes" (at-rule-no-vendor-prefix)'
-        );
-      });
-  });
-
   it("does not allow vendor prefixes in media features", () => {
     const css =
       "@media (-webkit-min-device-pixel-ratio: 1) { .foo { color: blue; } }";
