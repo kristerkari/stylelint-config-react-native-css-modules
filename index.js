@@ -15,7 +15,15 @@ module.exports = {
     "at-rule-no-vendor-prefix": true,
     "media-feature-name-no-vendor-prefix": true,
     "at-rule-blacklist": [
-      ["keyframes", "font-face", "supports", "charset"],
+      [
+        "keyframes",
+        "font-face",
+        "supports",
+        "charset",
+        "viewport",
+        "page",
+        "namespace"
+      ],
       {
         severity: "warning",
         message:
