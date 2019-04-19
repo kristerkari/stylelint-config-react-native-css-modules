@@ -1,3 +1,8 @@
+## v2.4.0
+
+- Added: support for stylelint version 10.
+- Added: warn for @viewport, @page and @namespace at-rules.
+
 ## v2.3.0
 
 - Added: blacklist CSS functions that are not supported by properties that are supported by React Native CSS modules.
