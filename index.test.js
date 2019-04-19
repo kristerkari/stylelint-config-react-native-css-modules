@@ -349,6 +349,72 @@ describe("stylelint-config-react-native-css-modules", () => {
       });
   });
 
+  it("warns for @viewport", () => {
+    const css = "@viewport { width: 100%; }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(output => {
+        const warnings = output.results[0].warnings;
+        const warning = warnings[0];
+        expect(output.errored).toBe(false);
+        expect(warning.text).toBe(
+          "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+        );
+      });
+  });
+
+  it("warns for @page", () => {
+    const css = "@page :left { margin: 1px; }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(output => {
+        const warnings = output.results[0].warnings;
+        const warning = warnings[0];
+        expect(output.errored).toBe(false);
+        expect(warning.text).toBe(
+          "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+        );
+      });
+  });
+
+  it("warns for @namespace", () => {
+    const css = "@namespace url(http://www.w3.org/1999/xhtml);";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(output => {
+        const warnings = output.results[0].warnings;
+        const warning = warnings[0];
+        expect(output.errored).toBe(false);
+        expect(warning.text).toBe(
+          "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+        );
+      });
+  });
+
   it("warns for incompatible units", () => {
     const css = ".foo { font-size: 1ch; }";
     expect.assertions(2);

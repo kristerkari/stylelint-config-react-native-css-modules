@@ -67,7 +67,15 @@ If you want to change the at-rule, unit, and CSS selector warnings into stylelin
   "extends": "stylelint-config-react-native-css-modules",
   "rules": {
     "at-rule-blacklist": [
-      ["keyframes", "font-face", "supports", "charset"],
+      [
+        "keyframes",
+        "font-face",
+        "supports",
+        "charset",
+        "viewport",
+        "page",
+        "namespace"
+      ],
       {
         "severity": "error",
         "message": "the @-rule is ignored by React Native CSS modules."
