@@ -14,6 +14,13 @@ module.exports = {
     "property-no-vendor-prefix": true,
     "at-rule-no-vendor-prefix": true,
     "media-feature-name-no-vendor-prefix": true,
+    "declaration-no-important": [
+      true,
+      {
+        severity: "error",
+        message: "!important is not supported by React Native CSS modules."
+      }
+    ],
     "at-rule-blacklist": [
       [
         "keyframes",

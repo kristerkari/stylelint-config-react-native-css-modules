@@ -1,3 +1,7 @@
+## HEAD
+
+- Added: warn when `!important` is used.
+
 ## v2.4.0
 
 - Added: support for stylelint version 10.

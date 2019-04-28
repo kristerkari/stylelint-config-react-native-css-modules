@@ -661,6 +661,28 @@ describe("stylelint-config-react-native-css-modules", () => {
       });
   });
 
+  it("warns for !important", () => {
+    const css = ".foo { color: pink !important; }";
+    expect.assertions(2);
+
+    return stylelint
+      .lint({
+        code: css,
+        formatter: "string",
+        config: {
+          extends: "./index"
+        }
+      })
+      .then(output => {
+        const warnings = output.results[0].warnings;
+        const warning = warnings[0];
+        expect(output.errored).toBe(true);
+        expect(warning.text).toBe(
+          "!important is not supported by React Native CSS modules."
+        );
+      });
+  });
+
   it("allows pseudo and type selectors (ignored by React Native CSS modules, but can be used for web when creating hybrid apps)", () => {
     const css =
       ".test:hover { color: blue; } .test input[type=text] { color: red; }";
