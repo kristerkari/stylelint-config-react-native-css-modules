@@ -1,4 +1,4 @@
-## HEAD
+## v2.5.0
 
 - Added: warn when `!important` is used.
 
