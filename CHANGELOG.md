@@ -1,3 +1,8 @@
+## v3.0.0
+
+- Added: separate configs for React Native and React Native + Web.
+- Breaking: the default config is now native-only. If you want to share the styles between React Native and Web, extend the `stylelint-config-react-native-css-modules/web` config instead.
+
 ## v2.5.1
 
 - Fixed: warns for `translateZ` function.

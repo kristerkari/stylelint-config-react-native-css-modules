@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-react-native-css-modules",
-  "version": "2.5.1",
+  "version": "3.0.0",
   "description": "Shareable stylelint config for React Native CSS modules",
   "main": "index.js",
   "files": [
