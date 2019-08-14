@@ -1,3 +1,8 @@
+## v2.5.1
+
+- Fixed: warns for `translateZ` function.
+- Fixed: improved warning text for functions and units.
+
 ## v2.5.0
 
 - Added: warn when `!important` is used.
