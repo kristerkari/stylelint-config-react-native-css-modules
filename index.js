@@ -45,6 +45,7 @@ module.exports = {
         "repeating-radial-gradient",
         "calc",
         "url",
+        "translateZ",
         "translate3d",
         "rotate3d",
         "matrix3d",
@@ -53,7 +54,7 @@ module.exports = {
       {
         severity: "warning",
         message:
-          "the function is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
       }
     ],
     "unit-whitelist": [
@@ -61,7 +62,7 @@ module.exports = {
       {
         severity: "warning",
         message:
-          "the unit is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the unit is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
       }
     ],
     "selector-pseudo-class-whitelist": [
