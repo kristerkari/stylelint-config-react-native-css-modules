@@ -89,6 +89,7 @@ If you want to change the at-rule, unit, and CSS selector warnings into stylelin
         "repeating-radial-gradient",
         "calc",
         "url",
+        "translateZ",
         "translate3d",
         "rotate3d",
         "matrix3d",
@@ -96,14 +97,14 @@ If you want to change the at-rule, unit, and CSS selector warnings into stylelin
       ],
       {
         "severity": "error",
-        "message": "the function is ignored by React Native CSS modules."
+        "message": "the function is not supported by React Native CSS modules."
       }
     ],
     "unit-whitelist": [
       ["px", "rem", "deg", "%", "vh", "vw", "vmin", "vmax"],
       {
         "severity": "error",
-        "message": "the unit is ignored by React Native CSS modules."
+        "message": "the unit is not supported by React Native CSS modules."
       }
     ],
     "selector-pseudo-class-whitelist": [
