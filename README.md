@@ -9,7 +9,7 @@
 
 Shareable stylelint config for [React Native CSS modules](https://github.com/kristerkari/react-native-css-modules)
 
-<img src="screenshots/warning.png" width="540">
+<img src="screenshots/linting.gif" width="640">
 
 ## Installation and usage
 
