@@ -36,119 +36,26 @@ Create the `.stylelintrc` config file (or open the existing one) and extend `sty
 }
 ```
 
-## Custom settings
+## Config for React Native + Web
 
-The config enables by default warnings for at-rules, units, CSS selectors that are not compatible with React Native CSS modules.
-
-If you want to turn off the warnings, you can use the following config:
+By default the config is for React Native only, but if you want to share the styles between React Native and Web, extend the `stylelint-config-react-native-css-modules/web` config instead. This turns some of the errors to warnings to ensure compatibility with Web.
 
 ```json
 {
-  "extends": "stylelint-config-react-native-css-modules",
+  "extends": "stylelint-config-react-native-css-modules/web",
   "rules": {
-    "react-native/font-weight-no-ignored-values": null,
-    "at-rule-blacklist": null,
-    "function-blacklist": null,
-    "unit-whitelist": null,
-    "selector-pseudo-class-whitelist": null,
-    "selector-max-universal": null,
-    "selector-max-attribute": null,
-    "selector-max-type": null,
-    "selector-max-combinators": null,
-    "selector-max-id": null
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9]*$"
   }
 }
 ```
 
-If you want to change the at-rule, unit, and CSS selector warnings into stylelint errors (e.g. If you are using React Native only), you can use the following config:
+If you want to turn off any of the included errors or warnings, set the rule's value to `null`:
 
 ```json
 {
-  "extends": "stylelint-config-react-native-css-modules",
+  "extends": "stylelint-config-react-native-css-modules/web",
   "rules": {
-    "at-rule-blacklist": [
-      [
-        "keyframes",
-        "font-face",
-        "supports",
-        "charset",
-        "viewport",
-        "page",
-        "namespace"
-      ],
-      {
-        "severity": "error",
-        "message": "the @-rule is ignored by React Native CSS modules."
-      }
-    ],
-    "function-blacklist": [
-      [
-        "linear-gradient",
-        "radial-gradient",
-        "repeating-linear-gradient",
-        "repeating-radial-gradient",
-        "calc",
-        "url",
-        "translateZ",
-        "translate3d",
-        "rotate3d",
-        "matrix3d",
-        "scale3d"
-      ],
-      {
-        "severity": "error",
-        "message": "the function is not supported by React Native CSS modules."
-      }
-    ],
-    "unit-whitelist": [
-      ["px", "rem", "deg", "%", "vh", "vw", "vmin", "vmax"],
-      {
-        "severity": "error",
-        "message": "the unit is not supported by React Native CSS modules."
-      }
-    ],
-    "selector-pseudo-class-whitelist": [
-      ["export", "root"],
-      {
-        "severity": "error",
-        "message": "pseudo class selectors are ignored by React Native CSS modules."
-      }
-    ],
-    "selector-max-universal": [
-      0,
-      {
-        "severity": "error",
-        "message": "universal selectors are ignored by React Native CSS modules."
-      }
-    ],
-    "selector-max-attribute": [
-      0,
-      {
-        "severity": "error",
-        "message": "attribute selectors are ignored by React Native CSS modules."
-      }
-    ],
-    "selector-max-type": [
-      0,
-      {
-        "severity": "error",
-        "message": "type selectors are ignored by React Native CSS modules."
-      }
-    ],
-    "selector-max-combinators": [
-      0,
-      {
-        "severity": "error",
-        "message": "combinator selectors are ignored by React Native CSS modules."
-      }
-    ],
-    "selector-max-id": [
-      0,
-      {
-        "severity": "error",
-        "message": "id selectors are ignored by React Native CSS modules."
-      }
-    ]
+    "react-native/font-weight-no-ignored-values": null
   }
 }
 ```
