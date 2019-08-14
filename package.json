@@ -5,6 +5,7 @@
   "main": "index.js",
   "files": [
     "index.js",
+    "web.js",
     "CHANGELOG.md",
     "README.md"
   ],

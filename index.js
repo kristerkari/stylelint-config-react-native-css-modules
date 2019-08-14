@@ -7,7 +7,7 @@ module.exports = {
       {
         severity: "warning",
         message:
-          "font-weight value other than 400, 700, normal or bold has not effect in React Native on Android. You can use it for Web when sharing the styles between React Native and browser."
+          "font-weight value other than 400, 700, normal or bold has not effect in React Native on Android."
       }
     ],
     "value-no-vendor-prefix": true,
@@ -32,9 +32,8 @@ module.exports = {
         "namespace"
       ],
       {
-        severity: "warning",
-        message:
-          "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+        severity: "error",
+        message: "the @-rule is ignored by React Native CSS modules."
       }
     ],
     "function-blacklist": [
@@ -52,65 +51,58 @@ module.exports = {
         "scale3d"
       ],
       {
-        severity: "warning",
-        message:
-          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+        severity: "error",
+        message: "the function is not supported by React Native CSS modules."
       }
     ],
     "unit-whitelist": [
       ["px", "rem", "deg", "%", "vh", "vw", "vmin", "vmax"],
       {
-        severity: "warning",
-        message:
-          "the unit is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+        severity: "error",
+        message: "the unit is not supported by React Native CSS modules."
       }
     ],
     "selector-pseudo-class-whitelist": [
       ["export", "root"],
       {
-        severity: "warning",
+        severity: "error",
         message:
-          "pseudo class selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+          "pseudo class selectors are ignored by React Native CSS modules."
       }
     ],
     "selector-max-universal": [
       0,
       {
-        severity: "warning",
-        message:
-          "universal selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+        severity: "error",
+        message: "universal selectors are ignored by React Native CSS modules."
       }
     ],
     "selector-max-attribute": [
       0,
       {
-        severity: "warning",
-        message:
-          "attribute selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+        severity: "error",
+        message: "attribute selectors are ignored by React Native CSS modules."
       }
     ],
     "selector-max-type": [
       0,
       {
-        severity: "warning",
-        message:
-          "type selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+        severity: "error",
+        message: "type selectors are ignored by React Native CSS modules."
       }
     ],
     "selector-max-combinators": [
       0,
       {
-        severity: "warning",
-        message:
-          "combinator selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+        severity: "error",
+        message: "combinator selectors are ignored by React Native CSS modules."
       }
     ],
     "selector-max-id": [
       0,
       {
-        severity: "warning",
-        message:
-          "id selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+        severity: "error",
+        message: "id selectors are ignored by React Native CSS modules."
       }
     ]
   }
