@@ -1,3 +1,7 @@
+## v3.1.0
+
+- Added: support for stylelint versions 11, 12 and 13.
+
 ## v3.0.0
 
 - Added: separate configs for React Native and React Native + Web.
