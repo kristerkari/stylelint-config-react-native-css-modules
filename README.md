@@ -1,11 +1,9 @@
 # stylelint-config-react-native-css-modules
 
 [![NPM version](http://img.shields.io/npm/v/stylelint-config-react-native-css-modules.svg)](https://www.npmjs.org/package/stylelint-config-react-native-css-modules)
-[![Build Status](https://travis-ci.org/kristerkari/stylelint-config-react-native-css-modules.svg?branch=master)](https://travis-ci.org/kristerkari/stylelint-config-react-native-css-modules)
-[![Build status](https://ci.appveyor.com/api/projects/status/u4f5x5k6d5ff24qt/branch/master?svg=true)](https://ci.appveyor.com/project/kristerkari/stylelint-config-react-native-css-modules/branch/master)
+[![Build Status](https://github.com/kristerkari/stylelint-config-react-native-css-modules/workflows/Tests/badge.svg)](https://github.com/kristerkari/stylelint-config-react-native-css-modules/actions?workflow=Tests)
 [![Downloads per month](https://img.shields.io/npm/dm/stylelint-config-react-native-css-modules.svg)](http://npmcharts.com/compare/stylelint-config-react-native-css-modules?periodLength=30)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
-[![Greenkeeper badge](https://badges.greenkeeper.io/kristerkari/stylelint-config-react-native-css-modules.svg)](https://greenkeeper.io/)
 
 Shareable stylelint config for [React Native CSS modules](https://github.com/kristerkari/react-native-css-modules)
 
