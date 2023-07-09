@@ -282,6 +282,31 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
       });
   });
 
+  it("does not warn for rule name deprecations", () => {
+    expect.assertions(3);
+
+    const code = `
+    .foo {
+      padding: 15px 2px 15px 3px;
+    }
+    `;
+
+    return stylelint
+      .lint({
+        code,
+        formatter: "string",
+        config: {
+          extends: "./web"
+        }
+      })
+      .then(output => {
+        const { warnings } = output.results[0];
+        expect(warnings.length).toBe(0);
+        expect(output.errored).toBe(false);
+        expect(/deprecated/g.test(output.output)).toBe(false);
+      });
+  });
+
   it("warns for font-weights that are not compatible with Android", () => {
     const css = ".foo { font-weight: 300 }";
     expect.assertions(2);
