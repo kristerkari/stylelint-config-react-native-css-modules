@@ -10,15 +10,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(true);
         expect(warning.text).toBe(
-          'Unexpected vendor-prefix "-webkit-flex" (value-no-vendor-prefix)'
+          'Unexpected vendor-prefix "-webkit-flex" (value-no-vendor-prefix)',
         );
       });
   });
@@ -32,17 +32,17 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         expect(output.errored).toBe(true);
         expect(warnings[0].text).toBe(
-          'Unexpected unknown property "-webkit-transform" (react-native/css-property-no-unknown)'
+          'Unexpected unknown property "-webkit-transform" (react-native/css-property-no-unknown)',
         );
         expect(warnings[1].text).toBe(
-          'Unexpected vendor-prefix "-webkit-transform" (property-no-vendor-prefix)'
+          'Unexpected vendor-prefix "-webkit-transform" (property-no-vendor-prefix)',
         );
       });
   });
@@ -57,15 +57,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(true);
         expect(warning.text).toBe(
-          "Unexpected vendor-prefix (media-feature-name-no-vendor-prefix)"
+          "Unexpected vendor-prefix (media-feature-name-no-vendor-prefix)",
         );
       });
   });
@@ -79,15 +79,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(true);
         expect(warning.text).toBe(
-          'Unexpected unknown property "word-wrap" (react-native/css-property-no-unknown)'
+          'Unexpected unknown property "word-wrap" (react-native/css-property-no-unknown)',
         );
       });
   });
@@ -101,15 +101,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "id selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+          "id selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -123,15 +123,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "type selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+          "type selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -145,15 +145,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "universal selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+          "universal selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -167,15 +167,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "combinator selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+          "combinator selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -189,15 +189,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "attribute selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+          "attribute selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -211,15 +211,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "type selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+          "type selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -233,15 +233,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "pseudo class selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
+          "pseudo class selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -255,10 +255,10 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         expect(output.errored).toBe(false);
         expect(output.output).toBe("");
       });
@@ -273,10 +273,10 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         expect(output.errored).toBe(false);
         expect(output.output).toBe("");
       });
@@ -296,10 +296,10 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const { warnings } = output.results[0];
         expect(warnings.length).toBe(0);
         expect(output.errored).toBe(false);
@@ -316,15 +316,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "font-weight value other than 400, 700, normal or bold has not effect in React Native on Android. You can use it for Web when sharing the styles between React Native and browser."
+          "font-weight value other than 400, 700, normal or bold has not effect in React Native on Android. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -339,15 +339,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -361,15 +361,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -383,15 +383,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -405,15 +405,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -427,15 +427,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -449,15 +449,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the unit is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the unit is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -472,15 +472,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -494,15 +494,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -517,15 +517,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -540,15 +540,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -562,15 +562,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -584,15 +584,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -606,15 +606,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -628,15 +628,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -650,15 +650,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -673,15 +673,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -695,15 +695,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(false);
         expect(warning.text).toBe(
-          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
+          "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
         );
       });
   });
@@ -717,15 +717,15 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(output => {
+      .then((output) => {
         const warnings = output.results[0].warnings;
         const warning = warnings[0];
         expect(output.errored).toBe(true);
         expect(warning.text).toBe(
-          "!important is not supported by React Native CSS modules."
+          "!important is not supported by React Native CSS modules.",
         );
       });
   });
@@ -740,10 +740,10 @@ describe("stylelint-config-react-native-css-modules (web)", () => {
         code: css,
         formatter: "string",
         config: {
-          extends: "./web"
-        }
+          extends: "./web",
+        },
       })
-      .then(result => {
+      .then((result) => {
         expect(result.errored).toBe(false);
       });
   });

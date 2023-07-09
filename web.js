@@ -8,8 +8,8 @@ const rules = {
     {
       severity: "warning",
       message:
-        "font-weight value other than 400, 700, normal or bold has not effect in React Native on Android. You can use it for Web when sharing the styles between React Native and browser."
-    }
+        "font-weight value other than 400, 700, normal or bold has not effect in React Native on Android. You can use it for Web when sharing the styles between React Native and browser.",
+    },
   ],
   "value-no-vendor-prefix": true,
   "property-no-vendor-prefix": true,
@@ -19,8 +19,8 @@ const rules = {
     true,
     {
       severity: "error",
-      message: "!important is not supported by React Native CSS modules."
-    }
+      message: "!important is not supported by React Native CSS modules.",
+    },
   ],
   "at-rule-blacklist": [
     [
@@ -30,13 +30,13 @@ const rules = {
       "charset",
       "viewport",
       "page",
-      "namespace"
+      "namespace",
     ],
     {
       severity: "warning",
       message:
-        "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
-    }
+        "the @-rule is ignored by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
+    },
   ],
   "function-blacklist": [
     [
@@ -50,73 +50,73 @@ const rules = {
       "translate3d",
       "rotate3d",
       "matrix3d",
-      "scale3d"
+      "scale3d",
     ],
     {
       severity: "warning",
       message:
-        "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
-    }
+        "the function is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
+    },
   ],
   "unit-whitelist": [
     ["px", "rem", "deg", "%", "vh", "vw", "vmin", "vmax"],
     {
       severity: "warning",
       message:
-        "the unit is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser."
-    }
+        "the unit is not supported by React Native CSS modules. You can use it for Web when sharing the styles between React Native and browser.",
+    },
   ],
   "selector-pseudo-class-whitelist": [
     ["export", "root"],
     {
       severity: "warning",
       message:
-        "pseudo class selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
-    }
+        "pseudo class selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser.",
+    },
   ],
   "selector-max-universal": [
     0,
     {
       severity: "warning",
       message:
-        "universal selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
-    }
+        "universal selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser.",
+    },
   ],
   "selector-max-attribute": [
     0,
     {
       severity: "warning",
       message:
-        "attribute selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
-    }
+        "attribute selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser.",
+    },
   ],
   "selector-max-type": [
     0,
     {
       severity: "warning",
       message:
-        "type selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
-    }
+        "type selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser.",
+    },
   ],
   "selector-max-combinators": [
     0,
     {
       severity: "warning",
       message:
-        "combinator selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
-    }
+        "combinator selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser.",
+    },
   ],
   "selector-max-id": [
     0,
     {
       severity: "warning",
       message:
-        "id selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser."
-    }
-  ]
-}
+        "id selectors are ignored by React Native CSS modules. You can use them for Web when sharing the styles between React Native and browser.",
+    },
+  ],
+};
 
 module.exports = {
   plugins: ["stylelint-react-native"],
-  rules: usesNewRuleNames() ? migrateRuleNames(rules) : rules
+  rules: usesNewRuleNames() ? migrateRuleNames(rules) : rules,
 };
