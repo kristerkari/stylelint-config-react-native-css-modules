@@ -33,7 +33,7 @@
   "devDependencies": {
     "jest": "^29.3.1",
     "np": "^8.0.4",
-    "stylelint": "15.10.2",
+    "stylelint": "15.11.0",
     "stylelint-react-native": "^2.2.0"
   },
   "peerDependencies": {
