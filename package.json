@@ -32,7 +32,7 @@
   "homepage": "https://github.com/kristerkari/stylelint-config-react-native-css-modules#readme",
   "devDependencies": {
     "jest": "^29.3.1",
-    "np": "^8.0.4",
+    "np": "^9.2.0",
     "stylelint": "15.10.2",
     "stylelint-react-native": "^2.2.0"
   },
