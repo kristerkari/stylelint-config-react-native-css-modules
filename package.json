@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "release": "np",
-    "test": "jest"
+    "test": "cross-env NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest"
   },
   "repository": {
     "type": "git",
@@ -31,13 +31,14 @@
   },
   "homepage": "https://github.com/kristerkari/stylelint-config-react-native-css-modules#readme",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "jest": "^29.3.1",
     "np": "^9.2.0",
-    "stylelint": "15.10.2",
+    "stylelint": "^16.2.1",
     "stylelint-react-native": "^2.2.0"
   },
   "peerDependencies": {
-    "stylelint": "^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0",
+    "stylelint": "^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0",
     "stylelint-react-native": "^2.0.0"
   },
   "dependencies": {
